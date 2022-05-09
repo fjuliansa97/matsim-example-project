@@ -28,18 +28,18 @@ public class NetworkExercise {
         emptyNetwork.addLink(link1);
         emptyNetwork.addLink(link2);
 
-        link1.getFreespeed(13.8);
+        link1.setFreespeed(13.8);
         link1.setCapacity(1800);
-        link1.getLength(1000);
+        link1.setLength(1000);
         link1.setNumberOfLanes(2);
 
         link2.setFreespeed(13.8);
-        link2.getCapacity(1800);
+        link2.setCapacity(1800);
         link2.setLength(1000);
-        link2.getNumberOfLanes(2);
+        link2.setNumberOfLanes(2);
 
-        NetworkWriter writer = new NetworkWriter();
-        writer.write("scenarios/week2/testNetwork");
+        NetworkWriter writer = new NetworkWriter(emptyNetwork);
+        writer.write("C:/Users/Lenovo/OneDrive - Universidad Nacional de Colombia/Master Deutschland/2022 - SS/MatSim/matsim-example-project/scenarios/week_2/testNetwork");
     }
 
 }
